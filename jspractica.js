@@ -21,7 +21,9 @@ fetch("./data/heroes.json")
   });
 
 function renderCards(jsondata) {
-  for (let char of jsondata.data.results){
+    const template = document.getElementById("plantilla").content; //en teoria lo recuperamos aqui, HABRÍA QUE CONTROLAR QUE SI NO ENCUENTRA NADA.....
+        
+    for (let char of jsondata.data.results){
     
-  }
+    }
 }

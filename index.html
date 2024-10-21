@@ -20,7 +20,44 @@
 
   <body>
     <header>
-      <!-- place navbar here -->
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Heroes</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" aria-current="page"
+                  >Home <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
       <!-- Aqui debeis crear vuestras cards etc, para meter los datos del json-->
@@ -31,88 +68,152 @@
            tened cuidado con los controles del acordeon-->
       <!-- as an example, we have created an accordeon, but you have to decide the structure to show the results 
            be careful with the controlls of the accordeon-->
-
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse1"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              Accordion Item #1
-            </button>
-          </h2>
-          <div
-            id="collapse1"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingOne"
-          >
-            <div class="accordion-body">
-              This is the first item's accordion body.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse2"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              Accordion Item #1
-            </button>
-          </h2>
-          <div
-            id="collapse2"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingOne"
-          >
-            <div class="accordion-body">
-              This is the first item's accordion body.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse3"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              Accordion Item #1
-            </button>
-          </h2>
-          <div
-            id="collapse3"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingOne"
-          >
-            <div class="accordion-body">
-              This is the first item's accordion body.
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
     <footer>
       <!-- place footer here -->
     </footer>
+    <template id="plantilla">
+      <div class="col-sm-6 col-md-4 col-xl-3 d-flex mt-3">
+        <div class="card flex-fill">
+          <img
+            class="card-img-top logo"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
+            alt="Title"
+          />
+          <div class="card-body">
+            <h5 class="card-title">A-Bomb (HAS)</h5>
+            <h8 class="card-text"
+              >Rick Jones has been Hulk's best bud since day one, but now he's
+              more than a friend...he's a teammate! Transformed by a Gamma
+              energy explosion, A-Bomb's thick, armored skin is just as strong
+              and powerful as it is blue. And when he curls into action, he uses
+              it like a giant bowling ball of destruction!
+            </h8>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="card-group">
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mccomic"
+                aria-expanded="false"
+                aria-controls="mccomic"
+              >
+                Comics
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mcseries"
+                aria-expanded="false"
+                aria-controls="mcseries"
+              >
+                Series
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mcstories"
+                aria-expanded="false"
+                aria-controls="mcstories"
+              >
+                Stories
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mcevents"
+                aria-expanded="false"
+                aria-controls="mcevents"
+              >
+                Events
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mcurls"
+                aria-expanded="false"
+                aria-controls="mcurls"
+              >
+                Urls
+              </button>
+              <!-- button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target=".multi-collapse" aria-expanded="false"
+                        aria-controls="mcvideo mcentrenador mcposter mcpresidente">ocultar todo</button -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="mccomic">
+                <div class="card card-body">
+                  <video width="640" height="360" controls="false">
+                    <source
+                      src="https://kingsleague-cdn.kama.football/account/production/team/video/LOOP%20KINGS%201K%20FC_v1.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="mcseries">
+                <div class="card card-body"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="collapse multi-collapse" id="mcstories">
+              <div class="card card-body">
+                <p class="card-text">Entrenador</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse" id="mcevents">
+              <div class="card card-body">
+                <img
+                  class="card-img-top"
+                  src="https://s3.eu-central-2.wasabisys.com/kingsleague-cdn.kama.football/account/production/staff/429468257.png"
+                  alt="Title"
+                />
+                <p class="card-text">Presi</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse" id="mcurls">
+              <div class="card card-body">
+                <p class="card-text">
+                  El equipo tiene un presupuesto de 10 euros
+                </p>
+                <p class="card-text">usa la abreviatura jajdfñlaisdfhasd</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".btn").click(function () {
+          $(".collapse.show").collapse("hide");
+        });
+      });
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
