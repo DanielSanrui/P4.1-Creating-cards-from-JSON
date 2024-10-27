@@ -24,6 +24,17 @@ function renderCards(jsondata) {
     const template = document.getElementById("plantilla").content; //en teoria lo recuperamos aqui, HABRÍA QUE CONTROLAR QUE SI NO ENCUENTRA NADA.....
         
     for (let char of jsondata.data.results){
-    
+      let card = template.cloneNode(true);
+
+      const logo = card.querySelector(".logo");
+      logo.setAttribute("src", heros.thumbnail);
+
+      const name = card.querySelector(".card-title");
+      name.textContent = heros.name;
+
+      const description = card.querySelector(".card-text");
+      description.textContent = heros.description;
+
+      cardRow.append(card);
     }
 }
