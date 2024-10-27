@@ -20,21 +20,24 @@ fetch("./data/heroes.json")
     console.log(e);
   });
 
-function renderCards(jsondata) {
-    const template = document.getElementById("plantilla").content; //en teoria lo recuperamos aqui, HABRÍA QUE CONTROLAR QUE SI NO ENCUENTRA NADA.....
-        
-    for (let char of jsondata.data.results){
+  const cardRow = document.getElementById("card-container");
+  function renderCards(jsondata) {
+    const template = document.getElementById("plantilla").content;
+
+    for (let heroe of jsondata.data.results) {
       let card = template.cloneNode(true);
-
+  
       const logo = card.querySelector(".logo");
-      logo.setAttribute("src", heros.thumbnail);
-
+      logo.setAttribute("src", `${heroe.thumbnail.path}.${heroe.thumbnail.extension}`);
+      logo.setAttribute("alt", heroe.name);
+  
       const name = card.querySelector(".card-title");
-      name.textContent = heros.name;
-
+      name.textContent = heroe.name;
+  
       const description = card.querySelector(".card-text");
-      description.textContent = heros.description;
-
-      cardRow.append(card);
+      description.textContent = heroe.description;
+  
+      cardRow.appendChild(card);
     }
-}
+  }
+  
