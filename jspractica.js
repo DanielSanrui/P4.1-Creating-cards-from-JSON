@@ -14,7 +14,7 @@ fetch("./data/heroes.json")
   })
   .then((jsondata) => {
     console.log(jsondata);
-    procesarJSON(jsondata);
+    renderCards(jsondata);
   })
   .catch((e) => {
     console.log(e);
@@ -37,7 +37,7 @@ fetch("./data/heroes.json")
       const description = card.querySelector(".card-text");
       description.textContent = heroe.description;
   
-      cardRow.appendChild(card);
+      cardRow.append(card);
     }
   }
   
