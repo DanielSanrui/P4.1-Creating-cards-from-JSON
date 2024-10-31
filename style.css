@@ -1,3 +1,8 @@
 body {
     background: linear-gradient(109deg, rgba(1, 6, 31, 1) 8%, rgba(120, 223, 243, 1) 100%);
 }
+
+.marvel {
+    width: 20%;
+    height: 20%;
+}

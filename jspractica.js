@@ -36,7 +36,19 @@ fetch("./data/heroes.json")
   
       const description = card.querySelector(".card-text");
       description.textContent = heroe.description;
-  
+
+      const comics = card.querySelector(".card-comic");
+      comics.textContent = heroe.comics.available;
+
+      const series = card.querySelector(".card-series");
+      series.textContent = heroe.series.available;
+
+      const stories = card.querySelector(".card-stories");
+      stories.textContent = heroe.stories.available;
+
+      const events = card.querySelector(".card-events");
+      events.textContent = heroe.events.available;
+
       cardRow.append(card);
     }
   }
